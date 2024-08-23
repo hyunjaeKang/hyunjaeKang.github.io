@@ -17,7 +17,7 @@
   
   
     
-      Benchmarks the Insight Toolkit | Hyun Jae Kang
+      NEON Assistant | Hyun Jae Kang
     
   
 </title>
@@ -61,7 +61,7 @@
   <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
 
 <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e">
-<link rel="canonical" href="http://localhost:4000/projects/2016_kitware_2/">
+<link rel="canonical" href="http://localhost:4000/projects/2023_sra_3/">
 
 <!-- Dark Mode -->
 <script src="/assets/js/theme.js?9a0c749ec5240d9cda97bc72359a72c0"></script>
@@ -212,7 +212,7 @@
       
         <div class="post">
   <header class="post-header">
-    <h1 class="post-title">Benchmarks the Insight Toolkit</h1>
+    <h1 class="post-title">NEON Assistant</h1>
     <p class="post-description"></p>
   </header>
 
@@ -222,19 +222,19 @@
     <tbody>
       <tr>
         <td><strong>Project title</strong></td>
-        <td>Performance Benchmarking the Insight Toolkit</td>
+        <td><strong>NEON Assistant</strong></td>
       </tr>
       <tr>
         <td><strong>Period</strong></td>
-        <td>2015 – 2016</td>
+        <td>2021 – 2023</td>
       </tr>
       <tr>
         <td><strong>Supervisor</strong></td>
-        <td>Dr. Matt MacCormick</td>
+        <td>Dr. Sajid Sadi</td>
       </tr>
       <tr>
         <td><strong>Funding</strong></td>
-        <td>NLM Contracts (RFQ: NLM-10-029-CYC)</td>
+        <td>STAR Labs, Samsung Electronics Co., Ltd.</td>
       </tr>
     </tbody>
   </table>
@@ -242,27 +242,63 @@
 
 <h2 id="purpose-abstract">Purpose (abstract):</h2>
 
-<p>To make quantifiable improvements in computational software performance, the performance must be measureable. In this project, we proposed and implemented a software module for the Insight Toolkit (ITK) to assist in performance benchmarking and a suite of benchmarks for the toolkit.
-Computational performance is quantified by reducing factors that confound timing measurements and by estimating measurement variance. New classes are presented that increase operating system process priority to minimize the impact of other processes running on the system. System hardware characteristics are extracted and displayed. The influence of hard disk input/output on runtime measurements is removed in the suite of benchmarks. Additionally, the number of threads used by each benchmark can be specified. These benchmarks consist of common analysis pipelines and run on 3D magnetic resonance brain image data so realistic performance is quantified. Benchmarks can be executed with multiple iterations, and timing statistics are recorded in tab separated value (.tsv) files, which are easily stored or processed for further analysis and visualization.</p>
+<p><strong>NEON Assistant</strong> is an advanced AI-powered virtual assistant. Unlike traditional AI assistants (such as Siri, Alexa, or
+ Google Assistant), <strong>NEON Assistant</strong> t is designed to behave and interact like a human, providing a more personalized
+ dynamic, and emotionally aware experience. It focuses on creating lifelike virtual beings with realistic appearance, emotions, and
+ behaviors.</p>
 
-<h4 id="references">References:</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] https://github.com/hyunjaeKang/ITKPerformanceBenchmarks
-</code></pre></div></div>
+<p><strong>NEON Assistant</strong>  delivers the next generation of human interfaces to reinvigorate human interaction. NEONs are
+inspired by the most natural of interfaces: you. They smile, nod, laugh, and engage in real-time conversations with us.</p>
 
 <h2 id="my-role-in-this-project">My role in this project:</h2>
+
 <ul>
-  <li>Designed and implemented the ITK module of PerformanceBenchmarking.</li>
+  <li>Led a research team to productize <strong>NEON Assistant</strong>.</li>
+  <li>Developed new methods to improve the image quality of the artificial human.</li>
+  <li>Investigated the generation of full-body motion of the artificial human based on audio data and user feedback.</li>
+  <li>Optimized the DL model of neural rendering to real-time rendering.</li>
+  <li>Researched and optimized neural rendering for mobile devices and web browsers.</li>
+  <li>Generated 14 NEONs from in-house data captures.</li>
+  <li>Cooperated with the software team to prepare several external commercial demos.
+    <ul>
+      <li>AI shopping assistant at NRF Retail Event. <a href="https://www.foxla.com/video/1399082%20%20%20" rel="external nofollow noopener" target="_blank"> <i class="fa-solid fa-video"></i> Video</a>
+</li>
+    </ul>
+  </li>
+  <li>
+    <p>Published a conference paper and several related patents with the team.</p>
+
+    <p>[1] S. Ravichandran, O. Texler, D. Dinev, and H. J. Kang, “Synthesizing photorealistic virtual humans through cross-modal disentanglement,” in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023, pp. 4585–4594. <a href="https://cvpr.thecvf.com/virtual/2023/poster/22125" rel="external nofollow noopener" target="_blank"><i class="fas fa-file-alt" style="font-size:24px"></i>Paper</a>,
+      <a href="https://www.youtube.com/watch?v=oNYy2-_xuhM" rel="external nofollow noopener" target="_blank"> <i class="fa fa-youtube-play" style="font-size:24px;color:red"></i> YouTube</a></p>
+
+    <p>[2] H. J. Kang, S. Ravichandran, O. Texler, D. P. Dinev, A. S. J.-Y. Liot, and S. Sadi, “Image generation using one-dimensional inputs,” Jul 2024, US Patent App. 18/342,726</p>
+
+    <p>[3] D.P. Dinev, O. Texler, S. Ravichandran, J.C. Palan, H.J. Kang, A. Gupta, A. Unnikrishnan, A.S.J.-Y. Liot, and S. Sadi, “End-to-end virtual human speech and movement synthesization,” Jul 2024, US Patent App. 18/342,721</p>
+
+    <p>[4] S. Ravichandran, D.P. Dinev, O. Texler, A. Gupta, J.C. Palan, H. J. Kang, A.S.J.-Y. Liot, and S. Sadi, “Multimodal disentanglement for generating virtual human avatars,” Jan 2024, US Patent App. 18/296,202</p>
+
+    <p>[5] S. Ravichandran, A.S.J.-Y. Liot, D.P. Dinev, O. Texler, H. J. Kang, J.C. Palan, and S. Sadi, “Creating images, meshes, and talking animations from mouth shape data,” Dec 2023, US Patent App. 17/967,872</p>
+
+    <p>[6] O. Texler, D.P. Dinev, A. Gupta, H. J. Kang, A.S.J.-Y. Liot, S. Ravichandran, and S. Sadi, “Hierarchical model-based generation of images,” Dec 2023, US Patent App. 17/967,868</p>
+  </li>
 </ul>
 
 <h2 id="related-tools">Related tools:</h2>
 <ul>
   <li>
-<strong>Software</strong>: C++, MFC, CMake, ITK</li>
+<strong>Software</strong>:  Python, C++, Tensroflow, Pytorch, OpenGL, ONNX, TensorRT</li>
 </ul>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <p><br></p>
 <div class="row justify-content-sm-center">
     <div class="col-sm-9 mt-3 mt-md-0">
+        <!-- <i class="fa fa-youtube-play" style="font-size:24px;color:red"></i><a href="https://www.youtube.com/watch?v=ODucR4xum_4&t=263s"> Youtube</a> -->
+        <!-- <a href="https://www.youtube.com/watch?v=ODucR4xum_4&t=263s"> Youtube <i class="fa-solid fa-video"></i></a> -->
+        <!-- <a href="https://www.youtube.com/watch?v=ODucR4xum_4&t=263s"> <i class="fa fa-youtube-play" style="font-size:24px;color:red"></i> YouTube</a> -->
         
 
 <figure>
@@ -273,9 +309,9 @@ Computational performance is quantified by reducing factors that confound timing
       https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
     -->
     
-      <source class="responsive-img-srcset" srcset="/assets/img/projects/2016_kitware_2/fig1-480.webp 480w,/assets/img/projects/2016_kitware_2/fig1-800.webp 800w,/assets/img/projects/2016_kitware_2/fig1-1400.webp 1400w," sizes="95vw" type="image/webp"></source>
+      <source class="responsive-img-srcset" srcset="/assets/img/projects/2023_sra_3/fig1.svg-480.webp 480w,/assets/img/projects/2023_sra_3/fig1.svg-800.webp 800w,/assets/img/projects/2023_sra_3/fig1.svg-1400.webp 1400w," sizes="95vw" type="image/webp"></source>
     
-    <img src="/assets/img/projects/2016_kitware_2/fig1.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/projects/2023_sra_3/fig1.svg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
   </picture>
 
   
@@ -284,7 +320,36 @@ Computational performance is quantified by reducing factors that confound timing
     </div>
 </div>
 <div class="caption">
-    <strong>Fig 1.</strong> The impact of an increased process priority when a parallel build of ITK is running in the background and when only a few system processes are running. Times are given with mean +/- two standard errors. In general, benchmark runtimes and their variability is more closer to low load system results when the process priority is increased.
+        <strong>Fig 1.</strong> Presentation material of Synthesizing photorealistic virtual humans through cross-modal disentanglement.
+        <a href="https://cvpr.thecvf.com/virtual/2023/poster/22125" rel="external nofollow noopener" target="_blank"><i class="fas fa-file-alt" style="font-size:24px"></i>Paper</a>,
+        <a href="https://www.youtube.com/watch?v=oNYy2-_xuhM" rel="external nofollow noopener" target="_blank"> <i class="fa fa-youtube-play" style="font-size:24px;color:red"></i> YouTube</a>
+</div>
+
+<p><br></p>
+<div class="row justify-content-sm-center">
+    <div class="col-sm-10 mt-3 mt-md-0">
+        
+
+<figure>
+  <picture>
+    <!-- Auto scaling with imagemagick -->
+    <!--
+      See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
+      https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
+    -->
+    
+      <source class="responsive-img-srcset" srcset="/assets/img/projects/2023_sra_3/fig2.svg-480.webp 480w,/assets/img/projects/2023_sra_3/fig2.svg-800.webp 800w,/assets/img/projects/2023_sra_3/fig2.svg-1400.webp 1400w," sizes="95vw" type="image/webp"></source>
+    
+    <img src="/assets/img/projects/2023_sra_3/fig2.svg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+        <strong>Fig 2.</strong> Media press of AI Shopping Assistant at NRE-Retail event. <a href="https://www.foxla.com/video/1399082" rel="external nofollow noopener" target="_blank"> <i class="fa-solid fa-video"></i> Video</a>
 </div>
 
   </article>
