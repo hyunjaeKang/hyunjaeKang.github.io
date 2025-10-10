@@ -341,10 +341,137 @@
 
 <hr>
 
+<h3 id="tinynerf">TinyNeRF</h3>
+
 <p><br></p>
+
+<ul>
+  <li><strong>NeRF-rendered video preview — Leog-Test dataset</strong></li>
+</ul>
+
+<table border="1">
+	<tr>
+		<th style="text-align: center;"> NeRF Method</th>
+		<th style="text-align: center;"> Description</th>
+		<th style="text-align: center;"> Output Preview</th>
+ 	</tr>
+ 	<tr>
+    <td style="text-align: left; padding: 10px;"><a href="https://github.com/hyunjaeKang/CV_Playgrounds/blob/main/3DCV/TinyNeRF/00_NERF.ipynb" rel="external nofollow noopener" target="_blank"><b>NeRF (Original, 2020)</b></a></td>
+    <td style="text-align: left; padding: 10px;">
+      <p> <b>- Core idea: </b> Neural network mapping (3D coords + viewing direction → color + density). </p>
+      <p> <b>- Pros: </b> Very high-quality novel view synthesis. </p>
+      <p> <b>- Cons: </b> Training takes days, rendering seconds per frame. </p>
+    </td>
+    <th style="text-align: center; padding: 10px;">
+      <video width="200" height="150" controls=""><source src="https://github.com/hyunjaeKang/CV_Playgrounds/raw/main/3DCV/TinyNeRF/outputs/00_NERF.mp4" type="video/mp4"></source></video>
+    </th>
+ 	</tr>
+	<tr>
+    <td style="text-align: left; padding: 10px;"><a href="https://github.com/hyunjaeKang/CV_Playgrounds/blob/main/3DCV/TinyNeRF/01_FastNeRF.ipynb" rel="external nofollow noopener" target="_blank"> <b>FastNeRF (2021)</b></a></td>
+    <td style="text-align: left; padding: 10px;">
+      <p> <b>- Core idea: </b> Accelerate NeRF rendering. </p>
+      <p> <b>- Technique: </b> Decomposes MLP into two functions (position, view), caches results in lookup tables. </p>
+      <p> <b>- Pros: </b> Real-time rendering. </p>
+      <p> <b>- Cons: </b> High memory usage. </p>
+    </td>
+    <th style="text-align: center; padding: 10px;">
+      <video width="200" height="150" controls=""><source src="https://github.com/hyunjaeKang/CV_Playgrounds/raw/main/3DCV/TinyNeRF/outputs/01_FastNeRF.mp4" type="video/mp4"></source></video>
+    </th>
+ 	</tr>
+	<tr>
+    <td style="text-align: left; padding: 10px;"><a href="https://github.com/hyunjaeKang/CV_Playgrounds/blob/main/3DCV/TinyNeRF/02_KiloNeRF.ipynb" rel="external nofollow noopener" target="_blank"><b>KiloNeRF (2021)</b></a></td>
+    <td style="text-align: left; padding: 10px;">
+      <p> <b>- Core idea: </b> Speed up NeRF. </p>
+      <p> <b>- Technique: </b> Thousands of small MLPs (local regions). </p>
+      <p> <b>- Pros: </b> Parallelized fast rendering. </p>
+      <p> <b>- Cons: </b> Training complexity. </p>
+    </td>
+    <th style="text-align: center; padding: 10px;">
+      <video width="200" height="150" controls=""><source src="https://github.com/hyunjaeKang/CV_Playgrounds/raw/main/3DCV/TinyNeRF/outputs/02_KiloNeRF.mp4" type="video/mp4"></source></video>
+    </th>
+ 	</tr>
+	<tr>
+    <td style="text-align: left; padding: 10px;"><a href="https://github.com/hyunjaeKang/CV_Playgrounds/blob/main/3DCV/TinyNeRF/03_PlenOctreesNeRF.ipynb" rel="external nofollow noopener" target="_blank"> <b>PlenOctrees (2021)</b></a></td>
+    <td style="text-align: left; padding: 10px;">
+      <p> <b>- Core idea: </b> Real-time rendering post-training. </p>
+      <p> <b>- Technique: </b> Converts NeRF into sparse octree with spherical harmonics. </p>
+      <p> <b>- Pros: </b> Extremely fast rendering. </p>
+      <p> <b>- Cons: </b> Needs conversion, not fully differentiable. </p>
+    </td>
+    <th style="text-align: center; padding: 10px;">
+      <video width="200" height="150" controls=""><source src="https://github.com/hyunjaeKang/CV_Playgrounds/raw/main/3DCV/TinyNeRF/outputs/03_PlenOctreesNeRF.mp4" type="video/mp4"></source></video>
+    </th>
+ 	</tr>
+  <tr>
+    <td style="text-align: left; padding: 10px;"><a href="https://github.com/hyunjaeKang/CV_Playgrounds/blob/main/3DCV/TinyNeRF/04_PlenoxelsNeRF.ipynb" rel="external nofollow noopener" target="_blank"> <b>Plenoxels (2022)</b></a></td>
+    <td style="text-align: left; padding: 10px;">
+      <p> <b>- Core idea: </b> Fast training. </p>
+      <p> <b>- Technique: </b> Sparse voxel grid with spherical harmonics (no MLP). </p>
+      <p> <b>- Pros: </b> Training in minutes, competitive rendering. </p>
+      <p> <b>- Cons: </b> Memory-heavy. </p>
+    </td>
+    <th style="text-align: center; padding: 10px;">
+      <video width="200" height="150" controls=""><source src="https://github.com/hyunjaeKang/CV_Playgrounds/raw/main/3DCV/TinyNeRF/outputs/04_PlenoxelsNeRF.mp4" type="video/mp4"></source></video>
+    </th>
+ 	</tr>
+  <tr>
+    <td style="text-align: left; padding: 10px;"><a href="https://github.com/hyunjaeKang/CV_Playgrounds/blob/main/3DCV/TinyNeRF/05_InfoNeRF.ipynb" rel="external nofollow noopener" target="_blank"> <b>InfoNeRF (2022)</b></a></td>
+    <td style="text-align: left; padding: 10px;">
+      <p> <b>- Core idea: </b> Few-shot / sparse input NeRF. </p>
+      <p> <b>- Technique: </b> Info-theoretic regularization (mutual information). </p>
+      <p> <b>- Pros: </b> Works with few images. </p>
+      <p> <b>- Cons: </b> Slower training. </p>
+    </td>
+    <th style="text-align: center; padding: 10px;">
+      <video width="200" height="150" controls=""><source src="https://github.com/hyunjaeKang/CV_Playgrounds/raw/main/3DCV/TinyNeRF/outputs/05_InfoNeRF.mp4" type="video/mp4"></source></video>
+    </th>
+ 	</tr>
+  <tr>
+    <td style="text-align: left; padding: 10px;"><a href="https://github.com/hyunjaeKang/CV_Playgrounds/blob/main/3DCV/TinyNeRF/06_InstantNERF.ipynb" rel="external nofollow noopener" target="_blank"> <b>Instant NeRF (2022)</b></a></td>
+    <td style="text-align: left; padding: 10px;">
+      <p> <b>- Core idea: </b> Drastically accelerate. </p>
+      <p> <b>- Technique: </b> Multi-resolution hash encoding + tiny CUDA MLP. </p>
+      <p> <b>- Pros: </b> Training in seconds-minutes, real-time rendering. </p>
+      <p> <b>- Cons: </b> Specialized GPU implementation. </p>
+    </td>
+    <th style="text-align: center; padding: 10px;">
+      <video width="200" height="150" controls=""><source src="https://github.com/hyunjaeKang/CV_Playgrounds/raw/main/3DCV/TinyNeRF/outputs/06_InstantNERF.mp4" type="video/mp4"></source></video>
+    </th>
+ 	</tr>
+  <tr>
+    <td style="text-align: left; padding: 10px;"><a href="https://github.com/hyunjaeKang/CV_Playgrounds/blob/main/3DCV/TinyNeRF/07_K-plan_NERF.ipynb" rel="external nofollow noopener" target="_blank"> <b>K-Planes NeRF (2023)</b></a></td>
+    <td style="text-align: left; padding: 10px;">
+      <p> <b>- Core idea: </b> Scale to large / dynamic scenes. </p>
+      <p> <b>- Technique: </b> Scene partitioning with shared priors. </p>
+      <p> <b>- Pros: </b> Works for bigger, complex scenes. </p>
+      <p> <b>- Cons: </b> Pipeline complexity. </p>
+    </td>
+    <th style="text-align: center; padding: 10px;">
+      <video width="200" height="150" controls=""><source src="https://github.com/hyunjaeKang/CV_Playgrounds/raw/main/3DCV/TinyNeRF/outputs/07_K-plan_NERF.mp4" type="video/mp4"></source></video>
+    </th>
+ 	</tr>
+  <tr>
+    <td style="text-align: left; padding: 10px;"><a href="https://github.com/hyunjaeKang/CV_Playgrounds/blob/main/3DCV/TinyNeRF/08_FreeNERF.ipynb" rel="external nofollow noopener" target="_blank"> <b>FreeNeRF (2023)</b></a></td>
+    <td style="text-align: left; padding: 10px;">
+      <p> <b>- Core idea: </b> Sparse input robustness. </p>
+      <p> <b>- Technique: </b> Geometry regularization + self-distillation. </p>
+      <p> <b>- Pros: </b> Better with few input views. </p>
+      <p> <b>- Cons: </b> Not as high fidelity as dense NeRF. </p>
+    </td>
+    <th style="text-align: center; padding: 10px;">
+    <video width="200" height="150" controls=""><source src="https://github.com/hyunjaeKang/CV_Playgrounds/raw/main/3DCV/TinyNeRF/outputs/08_FreeNERF.mp4" type="video/mp4"></source></video>
+  </th>
+ 	</tr>
+</table>
+
+<hr>
+<h3 id="3d-gaussian-splatting">3D Gaussian Splatting</h3>
+
+<p><br></p>
+
 <ul>
   <li>
-<strong>Image rendering with 3DGS on custom images</strong> (<a href="https://github.com/hyunjaeKang/CV_Playgrounds/blob/main/3DCV/GSPLAT/fit_a_single_image.ipynb" rel="external nofollow noopener" target="_blank">Notebook</a>)</li>
+<strong>2D image fitting with 3DGS on custom images</strong> (<a href="https://github.com/hyunjaeKang/CV_Playgrounds/blob/main/3DCV/GSPLAT/fit_a_single_image.ipynb" rel="external nofollow noopener" target="_blank">Notebook</a>)</li>
 </ul>
 
 <table border="1">
@@ -383,11 +510,10 @@
   </tbody>
 </table>
 
-<hr>
-
 <p><br></p>
+
 <ul>
-  <li><strong>Rendered a video using GSPLAT(3DGS, 3DGUT, 3DGS-MCMC, 2DGS) on custom datasets</strong></li>
+  <li><strong>Rendered videos using the GSPLAT library (including 3DGS, 3DGUT, 3DGS-MCMC, and 2DGS methods) on custom datasets.</strong></li>
 </ul>
 
 <table border="1">
@@ -562,10 +688,14 @@
   </tbody>
 </table>
 
+<hr>
+
+<h3 id="triangle-splatting">Triangle Splatting</h3>
+
 <p><br></p>
 
 <ul>
-  <li><strong>Video rendering with Triangle Splatting on custom datasets</strong></li>
+  <li><strong>Video Rendering using Triangle Splatting on custom datasets</strong></li>
 </ul>
 
 <table border="1">
